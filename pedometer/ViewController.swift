@@ -28,7 +28,8 @@ class ViewController: UIViewController {
                     if(error == nil){
                         // step num
                         let steps = data!.numberOfSteps
-                        self.counter.text = "steps: \(steps)"
+                        let distance = data?.distance?.doubleValue
+                        self.counter.text = "steps: \(steps)" + "\n\ndistance: \(distance)"
                     }
                 })
             }
